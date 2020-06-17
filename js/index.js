@@ -62,6 +62,23 @@ const siteContent = {
   navLinks[4].textContent = siteContent.nav["nav-item-5"];
   navLinks[5].textContent = siteContent.nav["nav-item-6"];
 
+//changed nav links to green 
+  navLinks.forEach(link => {
+      link.style.color = 'green';
+  });
+
+//added a nav link to start of navigation 
+const newNavLink = document.createElement('a');
+newNavLink.textContent = 'Social Media';
+newNavLink.style.color = 'green';
+const parentNav = document.querySelector('nav');
+parentNav.prepend(newNavLink);
+
+//added a nav link to end of navigation;
+const secondNewNavLink = document.createElement('a');
+secondNewNavLink.textContent = 'Careers';
+secondNewNavLink.style.color = 'green';
+parentNav.append(secondNewNavLink);
 
   //cta
 //   "cta": {
@@ -120,12 +137,13 @@ const siteContent = {
   console.log(mainConBottomHeaders);
   mainConBottomHeaders[0].textContent = siteContent["main-content"]["services-h4"];
   mainConBottomHeaders[1].textContent = siteContent["main-content"]["product-h4"];
+  mainConBottomHeaders[2].textContent = siteContent["main-content"]["vision-h4"];
 
   const mainConBottomParagraphs = document.querySelectorAll('.bottom-content p');
   console.log(mainConBottomParagraphs);
   mainConBottomParagraphs[0].textContent = siteContent["main-content"]["services-content"];
   mainConBottomParagraphs[1].textContent = siteContent["main-content"]["product-content"];
-
+  mainConBottomParagraphs[2].textContent = siteContent["main-content"]["vision-content"];
   //contact
 //   "contact": {
 //     "contact-h4" : "Contact",
